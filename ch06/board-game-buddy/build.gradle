@@ -16,7 +16,7 @@ repositories {
 }
 
 ext {
-    set('springAiVersion', "1.0.3")
+    set('springAiVersion', "1.1.0")
 }
 
 dependencies {
@@ -26,12 +26,12 @@ dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-vector-store-qdrant'
     implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
 
-    
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-    
-    
+
+
     runtimeOnly 'com.h2database:h2'
-    
+
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'
@@ -44,7 +44,7 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}" 
+        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
     }
 }
 

@@ -2,8 +2,8 @@
 
 package com.example.boardgamebuddy;
 
+import org.springframework.ai.audio.tts.TextToSpeechModel;
 import org.springframework.ai.openai.OpenAiAudioTranscriptionModel;
-import org.springframework.ai.openai.audio.speech.SpeechModel;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class OpenAiVoiceService implements VoiceService {
 
   private final OpenAiAudioTranscriptionModel transcriptionModel;
   
-  private final SpeechModel speechModel;
+  private final TextToSpeechModel speechModel;
   
 
   
@@ -30,7 +30,7 @@ public class OpenAiVoiceService implements VoiceService {
 
   public OpenAiVoiceService(
       OpenAiAudioTranscriptionModel transcriptionModel,
-      SpeechModel speechModel) {
+      TextToSpeechModel speechModel) {
     this.transcriptionModel = transcriptionModel;
     this.speechModel = speechModel;
   }

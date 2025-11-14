@@ -34,8 +34,8 @@ public class SpringAiBoardGameServiceTests {
   public void setup() {
     this.relevancyEvaluator = new RelevancyEvaluator(chatClientBuilder);
     
-    this.factCheckingEvaluator = new FactCheckingEvaluator(
-        chatClientBuilder);
+    this.factCheckingEvaluator = FactCheckingEvaluator.builder(chatClientBuilder)
+        .build();
     
   }
   

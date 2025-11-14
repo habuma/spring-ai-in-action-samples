@@ -80,9 +80,12 @@ public class McpConfig {
     var gameListResource = new McpSchema.Resource(   
         "games://game-list",
         "Game List",
+        null,
         "A list of games available in the repository",
         "text/plain",
-        annotations
+        null,
+        annotations,
+        null
     );
 
     var gameTitles = gameRepository.findAllTitles(); 
