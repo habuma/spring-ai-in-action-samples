@@ -1,8 +1,8 @@
 package com.example.mcpserver;
 
-import com.logaritex.mcp.annotation.McpArg;
-import com.logaritex.mcp.annotation.McpPrompt;
 import io.modelcontextprotocol.spec.McpSchema;
+import org.springaicommunity.mcp.annotation.McpArg;
+import org.springaicommunity.mcp.annotation.McpPrompt;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

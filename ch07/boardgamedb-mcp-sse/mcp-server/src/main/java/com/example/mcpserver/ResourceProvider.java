@@ -1,7 +1,7 @@
 package com.example.mcpserver;
 
-import com.logaritex.mcp.annotation.McpResource;
 import io.modelcontextprotocol.spec.McpSchema;
+import org.springaicommunity.mcp.annotation.McpResource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,11 +19,15 @@ public class ResourceProvider {
                name = "Game List",
                description = "A list of games available in the repository")
   public McpSchema.ReadResourceResult gameListResource(McpSchema.ReadResourceRequest request) {
-    var gameTitles = gameRepository.findAllTitles();     
+    System.err.println("A");
+    var gameTitles = gameRepository.findAllTitles();
+    System.err.println("B: " + gameTitles);
     var gameListText = new StringBuilder();
+    System.err.println("C");
     for (String title : gameTitles) {
       gameListText.append("- ").append(title).append("\n");
     }
+    System.err.println("D: " + gameListText);
 
     return new McpSchema.ReadResourceResult(    
         List.of(new McpSchema.TextResourceContents(

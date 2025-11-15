@@ -1,5 +1,7 @@
 package com.example.mcpserver;
 
+import org.springaicommunity.mcp.annotation.McpTool;
+import org.springaicommunity.mcp.annotation.McpToolParam;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
@@ -15,7 +17,7 @@ public class GameTools {
     this.gameRepository = gameRepository;
   }
 
-  @Tool(name = "gameCount", description = "Returns the count of games in the repository.")
+  @McpTool(name = "gameCount", description = "Returns the count of games in the repository.")
   public long gameCount() {
     return gameRepository.count();
   }
@@ -23,14 +25,14 @@ public class GameTools {
   @Tool(name = "findGamesForPlayerCount",
         description = "Finds a games suitable for the specified number of players.")
   public List<Game> findGamesForPlayerCount(
-      @ToolParam(description = "The number of players to find games for.") int numPlayers) {
+      @McpToolParam(description = "The number of players to find games for.") int numPlayers) {
     return gameRepository.findGamesForPlayerCount(numPlayers);  
   }
 
-  @Tool(name = "findGamesForPlayingTime",
+  @McpTool(name = "findGamesForPlayingTime",
         description = "Finds games suitable for the specified playing time.")
   public List<Game> findGamesForPlayingTime(
-      @ToolParam(description = "The time for playing the game.") int time) {
+      @McpToolParam(description = "The time for playing the game.") int time) {
     return gameRepository.findGamesForPlayingTime(time);   
   }
 
