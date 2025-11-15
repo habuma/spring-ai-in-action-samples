@@ -1,0 +1,16 @@
+
+
+spring:
+  application:
+    name: mcp-client
+
+  ai:
+    mcp:
+      client:
+        streamable-http:
+          connections:
+            boardgamedb:
+              url: http://localhost:3001
+
+        toolcallback:
+          enabled: true
