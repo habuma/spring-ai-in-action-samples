@@ -1,0 +1,10 @@
+This branch includes changes to the book's example code to build against Spring
+AI 1.1.0. Aside from the version, the following are the significant changes that
+have been made:
+
+- FactCheckingEvaluator is now created with a builder instead of a constructor.
+- MCP Server tools now use @McpTool and @McpToolParam instead of @Tool and
+  @ToolParam. It's also no longer necessary to declare a ToolCallbackProvider
+  bean.
+- Bonus: I added a Streamable HTTP MCP Server example.
+- Changed SpeechModel to TextToSpeechModel in voice examples.
